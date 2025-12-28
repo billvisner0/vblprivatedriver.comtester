@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    /* Updated background: Smooth, dark-toned angular layers */
+    background: linear-gradient(160deg, #2c343b 0%, #2c343b 45%, #3d4a57 45%, #3d4a57 47%, #2c343b 47%, #2c343b 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents scrolling on a simple landing page */
+}
+
+header {
+    padding: 30px 50px;
+}
+
+.logo {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Aligns to the top */
+    padding-top: 15vh; /* Moves the text higher up the page */
+}
+
+.content-box {
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 3.8rem);
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    opacity: 0.8;
+    max-width: 550px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
