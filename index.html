@@ -3,19 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VBL Private Driver Services</title>
+    <title>VBL Private Driver | Executive Transportation Las Vegas & Pahrump</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">VBL Private Driver Services</div>
-    </header>
-    
-    <main>
-        <div class="content-box">
-            <h1>Work In Progress</h1>
-            <p>This site is still in the creation stages, please check again soon.</p>
+
+    <nav>
+        <div class="logo">VBL<span> Private Driver</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Executive Transportation</h1>
+            <p>Serving Pahrump, Las Vegas, and LAS Airport with Premium Service.</p>
+            <div class="cta-buttons">
+                <a href="tel:+15555555555" class="btn primary">Click to Call</a>
+                <a href="#quote" class="btn secondary">Request Quote</a>
+            </div>
         </div>
-    </main>
+    </header>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Airport Transfers</h3>
+                <p>Reliable LAS Airport pickup and drop-off.</p>
+            </div>
+            <div class="card">
+                <h3>Pahrump ↔ Vegas</h3>
+                <p>Seamless inter-city travel in luxury.</p>
+            </div>
+            <div class="card">
+                <h3>Hourly & Events</h3>
+                <p>Dedicated driver for your corporate or private events.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="quote-section">
+        <h2>Request a Quote</h2>
+        <form action="https://formspree.io/f/your-id" method="POST" class="quote-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <select name="service_type">
+                <option value="airport">Airport Transfer</option>
+                <option value="pahrump-vegas">Pahrump to Vegas</option>
+                <option value="hourly">Hourly/Executive</option>
+            </select>
+            <textarea name="message" placeholder="Trip details (Date, Time, Passenger count)"></textarea>
+            <button type="submit" class="btn primary">Submit Request</button>
+        </form>
+    </section>
+
+    <div class="mobile-contact-bar">
+        <a href="tel:+15555555555">📞 Call</a>
+        <a href="sms:+15555555555">💬 Text</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VBL Private Driver Services. Licensed & Insured.</p>
+    </footer>
+
 </body>
 </html>
