@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Updated background: Smooth, dark-toned angular layers */
     background: linear-gradient(160deg, #2c343b 0%, #2c343b 45%, #3d4a57 45%, #3d4a57 47%, #2c343b 47%, #2c343b 100%);
     background-size: cover;
     background-attachment: fixed;
@@ -15,7 +14,7 @@ body {
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevents scrolling on a simple landing page */
+    overflow: hidden; 
 }
 
 header {
@@ -33,9 +32,9 @@ header {
 main {
     flex: 1;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: flex-start; /* Aligns to the top */
-    padding-top: 15vh; /* Moves the text higher up the page */
+    justify-content: center; 
+    align-items: flex-start; 
+    padding-top: 15vh; 
 }
 
 .content-box {
