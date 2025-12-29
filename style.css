@@ -140,26 +140,49 @@ nav {
 }
 .mobile-contact-bar a { color: black; font-weight: 700; text-decoration: none; }
 
-/* FIXED MOBILE MEDIA QUERY */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero h1 { font-size: 2.2rem; }
-    .mobile-contact-bar { display: flex; justify-content: space-around; }
-    body { padding-bottom: 60px; }
 
-    /* Quote Box Mobile Fixes */
+
+@media screen and (max-width: 768px) {
+    
+    .hero h1 { 
+        font-size: 1.8rem !important; 
+        padding: 0 10px;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .btn {
+        width: 100%; 
+        margin: 5px 0 !important;
+        font-size: 0.8rem !important;
+    }
+
+    
     .quote-section {
-        padding: 60px 15px; /* Reduced vertical padding and added breathing room on sides */
-        background-attachment: scroll; /* Disabling fixed background for better mobile performance */
+        padding: 40px 10px !important;
+        background-attachment: scroll !important; 
     }
     .quote-container {
-        padding: 30px 15px; /* Reduced internal padding to allow form fields more space */
+        padding: 20px 15px !important;
+        width: 100% !important;
+        max-width: 100%;
     }
-    .form-row { 
-        grid-template-columns: 1fr; /* Stack form fields vertically */
-        gap: 10px; /* Tighter spacing for mobile */
-    }
-    h2 { font-size: 1.8rem; } /* Slightly smaller headings for small screens */
-}
 
-footer { padding: 40px; text-align: center; border-top: 1px solid #333; color: #666; font-size: 0.8rem; }
+    /
+    .form-row {
+        display: block !important; 
+    }
+    .form-group {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    
+   
+    input, select, textarea {
+        font-size: 16px !important; 
+        width: 100% !important;
+    }
+}
