@@ -35,35 +35,81 @@ h2 {
     text-align: center;
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background: rgba(18, 18, 18, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 10px 5%; 
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3); 
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo { font-size: 1.5rem; color: var(--white); }
-.logo span { color: var(--gold); }
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem; 
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    min-width: fit-content;
+}
 
-.nav-links { list-style: none; display: flex; }
-.nav-links li { margin-left: 25px; }
+.logo span { 
+    color: var(--gold); 
+    display: block; 
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 15px; 
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--silver);
-    font-size: 0.8rem;
+    font-size: 0.75rem; 
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s;
 }
-.nav-links a:hover { color: var(--gold); }
 
+.nav-links a:hover { 
+    color: var(--gold); 
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; 
+        padding: 15px 5%;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem; 
+    }
+
+    .logo {
+        text-align: center;
+    }
+}
 .hero {
     height: 85vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('fleet-exterior-right.jpg');
