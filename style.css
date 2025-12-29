@@ -35,7 +35,6 @@ h2 {
     text-align: center;
 }
 
-/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -65,7 +64,6 @@ nav {
 }
 .nav-links a:hover { color: var(--gold); }
 
-/* --- Hero --- */
 .hero {
     height: 85vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('fleet-exterior-right.jpg');
@@ -80,7 +78,6 @@ nav {
 .hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
 .hero p { font-size: 1.2rem; color: var(--silver); margin-bottom: 30px; }
 
-/* --- Buttons --- */
 .btn {
     padding: 14px 30px;
     text-decoration: none;
@@ -95,7 +92,6 @@ nav {
 .secondary { border: 2px solid var(--white); color: var(--white); }
 .primary:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
 
-/* --- Services --- */
 .services { padding: 100px 10%; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
 .card {
@@ -107,7 +103,6 @@ nav {
 .card:hover { border-color: var(--gold); transform: translateY(-5px); }
 .card h3 { color: var(--gold); margin-bottom: 15px; }
 
-/* --- Fleet Grid --- */
 .fleet-section { padding: 80px 5%; background: #111; text-align: center; }
 .section-subtitle { color: var(--silver); margin-bottom: 40px; }
 .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
@@ -118,7 +113,6 @@ nav {
 }
 .fleet-item:hover img { transform: scale(1.05); }
 
-/* --- Refined Quote Form --- */
 .quote-section {
     padding: 100px 5%;
     background: linear-gradient(rgba(18,18,18,0.9), rgba(18,18,18,0.9)), url('fleet-cockpit.jpg');
@@ -140,7 +134,6 @@ nav {
 .quote-form input:focus { border-color: var(--gold); outline: none; }
 .full-width { width: 100%; cursor: pointer; }
 
-/* --- Mobile Nav & Bar --- */
 .mobile-contact-bar {
     display: none; position: fixed; bottom: 0; width: 100%;
     background: var(--gold); padding: 15px; z-index: 2000;
