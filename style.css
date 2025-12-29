@@ -18,7 +18,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,7 @@ nav {
 .nav-links a { text-decoration: none; color: var(--white); font-size: 0.9rem; transition: 0.3s; }
 .nav-links a:hover { color: var(--gold); }
 
-/* Hero - Now using your Cadillac Exterior */
+
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fleet-exterior-right.jpg'); 
@@ -60,7 +59,7 @@ nav {
 
 .hero h1 { font-family: 'Cinzel', serif; font-size: 3rem; margin-bottom: 20px; }
 
-/* Buttons */
+
 .btn {
     padding: 12px 25px;
     text-decoration: none;
@@ -75,17 +74,17 @@ nav {
 .secondary { border: 1px solid var(--white); color: var(--white); }
 .primary:hover { background: var(--white); }
 
-/* Services Section */
+
 .services { padding: 80px 10%; text-align: center; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
 .card { padding: 30px; border: 1px solid #333; background: #222; transition: 0.3s; }
 .card:hover { border-color: var(--gold); }
 .card h3 { color: var(--gold); margin-bottom: 15px; }
 
-/* --- NEW FLEET SECTION STYLING --- */
+
 .fleet-section {
     padding: 80px 5%;
-    background-color: #111; /* Slightly darker to separate from services */
+    background-color: #111;
     text-align: center;
     border-top: 1px solid #333;
 }
@@ -127,7 +126,6 @@ nav {
     transform: scale(1.05);
 }
 
-/* Quote Form */
 .quote-section { padding: 80px 10%; background: var(--charcoal); text-align: center; }
 .quote-form { max-width: 600px; margin: 40px auto; display: flex; flex-direction: column; }
 .quote-form input, .quote-form select, .quote-form textarea {
