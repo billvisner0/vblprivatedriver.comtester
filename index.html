@@ -56,20 +56,21 @@
         <h2>Our Premium Service</h2>
         <p class="section-subtitle">Travel in the unmatched luxury and command of our Cadillac Escalade.</p>
         <div class="fleet-grid">
-            <div class="fleet-item"><img src="fleet-exterior-left.jpg" alt="Cadillac Escalade Exterior Front Left"></div>
-            <div class="fleet-item"><img src="fleet-exterior-right.jpg" alt="Cadillac Escalade Exterior Front Right"></div>
-            <div class="fleet-item"><img src="fleet-exterior-rear-left.jpg" alt="Cadillac Escalade Exterior Rear Left"></div>
-            <div class="fleet-item"><img src="fleet-exterior-rear-right.jpg" alt="Cadillac Escalade Exterior Rear Right"></div>
-            <div class="fleet-item"><img src="fleet-interior-rear.jpg" alt="Executive Quilted Leather Passenger Seating"></div>
-            <div class="fleet-item"><img src="fleet-cockpit.jpg" alt="High-Tech Driver Cockpit"></div>
+            <div class="fleet-item"><img src="fleet-exterior-leftn.jpg" alt="Cadillac Escalade Exterior Front Left"></div>
+            <div class="fleet-item"><img src="fleet-exterior-rightn.jpg" alt="Cadillac Escalade Exterior Front Right"></div>
+            <div class="fleet-item"><img src="fleet-exterior-rear-leftn.jpg" alt="Cadillac Escalade Exterior Rear Left"></div>
+            <div class="fleet-item"><img src="fleet-exterior-rear-rightn.jpg" alt="Cadillac Escalade Exterior Rear Right"></div>
+            <div class="fleet-item"><img src="fleet-interior-rearn.jpg" alt="Executive Quilted Leather Passenger Seating"></div>
+            <div class="fleet-item"><img src="fleet-cockpitn.jpg" alt="High-Tech Driver Cockpit"></div>
         </div>
     </section>
 
-   <section id="quote" class="quote-section">
+<section id="quote" class="quote-section">
     <div class="quote-container">
-        <h2>Schedule your private driver.</h2>
+        <h2>Request a Private Quote</h2>
         <p class="section-subtitle">
-        Schedule your private driver services using the contact methods below.    
+            For immediate assistance, call or text us at: 
+            <a href="tel:+17755374549" style="color: var(--gold); font-weight: 700;">(775) 537-4549</a>
         </p>
         
         <form action="https://formspree.io/f/xqekyyqj" method="POST" class="quote-form">
@@ -78,32 +79,73 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" name="name" placeholder="Eric Dym" required>
+                    <input type="text" name="name" placeholder="First and Last Name" required>
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" name="phone" placeholder="(775) 537-4549" required>
+                    <input type="tel" name="phone" placeholder="+1 (123) 456-7890" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" name="email" placeholder="EricDym@Retard.Mental" required>
+                    <input type="email" name="email" placeholder="email@example.com" required>
                 </div>
                 <div class="form-group">
                     <label>Service Type</label>
                     <select name="service_type">
                         <option value="airport">Airport Transfer (LAS)</option>
-                        <option value="pahrump-vegas">Pahrump ↔ Las Vegas</option>
-                        <option value="hourly">Hourly Executive Service</option>
+                        <option value="hourly">Hourly Private Driver</option>
+                        <option value="point-to-point">Point-to-Point</option>
+                        <option value="custom">Custom Request</option>
                     </select>
                 </div>
             </div>
 
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date of Service</label>
+                    <input type="date" name="service_date" required>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Time</label>
+                    <input type="time" name="pickup_time" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Passenger Count (6 Maximum)</label>
+                    <select name="passenger_count">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Flight Number (If Airport)</label>
+                    <input type="text" name="flight_number" placeholder="e.g. AA1234">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Pickup Location</label>
+                    <input type="text" name="pickup_location" placeholder="Address or Airport" required>
+                </div>
+                <div class="form-group">
+                    <label>Drop-off Location</label>
+                    <input type="text" name="dropoff_location" placeholder="Address or Destination" required>
+                </div>
+            </div>
+
             <div class="form-group">
-                <label>Trip Details</label>
-                <textarea name="message" placeholder="Please include Date, Time, and Passenger count..."></textarea>
+                <label>Additional Notes</label>
+                <textarea name="message" placeholder="Include any specific requests or flight details..."></textarea>
             </div>
 
             <button type="submit" class="btn primary full-width">Submit Reservation Request</button>
