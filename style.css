@@ -1,8 +1,8 @@
 :root {
     --gold: #d4af37;
-    --gold-dark: #b3922d; /* For hover states */
-    --charcoal-dark: #121212; /* Deeper black for background */
-    --charcoal-light: #1e1e1e; /* Slightly lighter for cards/forms */
+    --gold-dark: #b3922d; 
+    --charcoal-dark: #121212;
+    --charcoal-light: #1e1e1e;
     --white: #ffffff;
     --silver: #c0c0c0;
 }
@@ -25,7 +25,6 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* --- Typography Overrides --- */
 h1, h2, h3, .logo {
     font-family: 'Cinzel', serif;
 }
@@ -36,17 +35,15 @@ h2 {
     color: var(--gold);
 }
 
-/* --- Premium Navigation with Glassmorphism --- */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    /* Glass effect background */
     background: rgba(18, 18, 18, 0.85);
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -75,7 +72,6 @@ nav {
     transition: 0.3s;
 }
 
-/* Animated underline on hover */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -88,10 +84,8 @@ nav {
 .nav-links a:hover::after { width: 100%; }
 
 
-/* --- Hero Section with Deeper Overlay --- */
 .hero {
     height: 85vh;
-    /* Darker gradient at bottom for text readability */
     background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('fleet-exterior-right.jpg'); 
     background-size: cover;
     background-position: center;
