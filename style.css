@@ -1,6 +1,8 @@
 :root {
     --gold: #d4af37;
-    --charcoal: #1a1a1a;
+    --gold-dark: #b3922d; /* For hover states */
+    --charcoal-dark: #121212; /* Deeper black for background */
+    --charcoal-light: #1e1e1e; /* Slightly lighter for cards/forms */
     --white: #ffffff;
     --silver: #c0c0c0;
 }
@@ -11,44 +13,86 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--charcoal);
-    color: var(--white);
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--charcoal-dark);
+    color: var(--white);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+/* --- Typography Overrides --- */
+h1, h2, h3, .logo {
+    font-family: 'Cinzel', serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--gold);
+}
+
+/* --- Premium Navigation with Glassmorphism --- */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: rgba(0,0,0,0.9);
+    padding: 15px 5%;
+    /* Glass effect background */
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logo {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--gold);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+.logo span { color: var(--gold); font-weight: 400; }
+
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 30px; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--silver);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
 }
 
-.nav-links li { margin-left: 20px; }
-.nav-links a { text-decoration: none; color: var(--white); font-size: 0.9rem; transition: 0.3s; }
+/* Animated underline on hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    bottom: -5px; left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
 .nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
 
 
+/* --- Hero Section with Deeper Overlay --- */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fleet-exterior-right.jpg'); 
+    height: 85vh;
+    /* Darker gradient at bottom for text readability */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('fleet-exterior-right.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -57,76 +101,8 @@ nav {
     text-align: center;
 }
 
-.hero h1 { font-family: 'Cinzel', serif; font-size: 3rem; margin-bottom: 20px; }
+.hero-content { max-width: 800px; padding: 20px; }
 
-
-.btn {
-    padding: 12px 25px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.primary { background: var(--gold); color: black; }
-.secondary { border: 1px solid var(--white); color: var(--white); }
-.primary:hover { background: var(--white); }
-
-
-.services { padding: 80px 10%; text-align: center; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-.card { padding: 30px; border: 1px solid #333; background: #222; transition: 0.3s; }
-.card:hover { border-color: var(--gold); }
-.card h3 { color: var(--gold); margin-bottom: 15px; }
-
-
-.fleet-section {
-    padding: 80px 5%;
-    background-color: #111;
-    text-align: center;
-    border-top: 1px solid #333;
-}
-
-.section-subtitle {
-    color: var(--silver);
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-.fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-}
-
-.fleet-item {
-    background: #000;
-    border: 1px solid #222;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-.fleet-item:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-}
-
-.fleet-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.fleet-item:hover img {
-    transform: scale(1.05);
-}
-
-.quote-section { padding: 80px 10%; background: var(--charcoal); text-align: center; }
-.quote-form { max-width: 600px; margin: 40px auto; display: flex; flex-direction: column; }
-.quote-form input, .quote-form select, .quote-form textarea {
-    padding
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom:
